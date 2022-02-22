@@ -8,117 +8,35 @@
     android:background="#009688"
     tools:context=".ImageActivity">
 
-    <TableRow
-        android:layout_width="360dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginBottom="550dp"
+    <ImageView
+        android:id="@+id/arrynImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginBottom="512dp"
+        android:contentDescription="House Arryn of the Eyrie"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/arryn" />
 
-        <ImageView
-            android:id="@+id/arrynSigil"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:contentDescription="House Arryn of the Eyrie"
-            android:src="@drawable/arryn" />
-
-        <ImageView
-            android:id="@+id/baratheonSigil"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:contentDescription="House Baratheon of Storm's End"
-            android:src="@drawable/baratheon" />
-
-        <ImageView
-            android:id="@+id/freySigil"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:contentDescription="House Frey of the Twins"
-            android:src="@drawable/frey" />
-
-        <ImageView
-            android:id="@+id/greyjoySigil"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:contentDescription="House Greyjoy of Pyke"
-            android:src="@drawable/greyjoy" />
-    </TableRow>
-
-    <TableRow
-        android:layout_width="360dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginBottom="460dp"
+    <TextView
+        android:id="@+id/imageName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="175dp"
+        android:layout_marginBottom="292dp"
+        android:text="Name"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <ImageView
-            android:id="@+id/lannisterSigil"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:contentDescription="House Lannister of Casterly Rock"
-            android:src="@drawable/lannister" />
-
-        <ImageView
-            android:id="@+id/martellSigil"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:contentDescription="House Martell of Sunspear"
-            android:src="@drawable/martell" />
-
-        <ImageView
-            android:id="@+id/mormontSigil"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:contentDescription="House Mormont of Bear Island"
-            android:src="@drawable/mormont" />
-
-        <ImageView
-            android:id="@+id/starkSigil"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:contentDescription="House Stark of Winterfell"
-            android:src="@drawable/stark" />
-    </TableRow>
-
-    <TableRow
-        android:layout_width="360dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginBottom="370dp"
+    <TextView
+        android:id="@+id/imageDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="164dp"
+        android:layout_marginBottom="250dp"
+        android:text="Description"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageView
-            android:id="@+id/targaryenSigil"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:src="@drawable/targaryen" />
-
-        <ImageView
-            android:id="@+id/tarlySigil"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:src="@drawable/tarly" />
-
-        <ImageView
-            android:id="@+id/tullySigil"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:src="@drawable/tully" />
-
-        <ImageView
-            android:id="@+id/tyrellSigil"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:src="@drawable/tyrell" />
-    </TableRow>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="409dp"
-        android:layout_height="367dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="363dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
