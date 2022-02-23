@@ -1,6 +1,7 @@
 package edu.temple.imageactivity
 
 import android.content.Context
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -15,25 +16,29 @@ class PhotoAdapter(var context : Context) : RecyclerView.Adapter<PhotoAdapter.Vi
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        var image: ImageView
         var name: TextView
         var description: TextView
         init {
-            name = itemView.findViewById(R.id.imageName)
-            description = itemView.findViewById(R.id.imageDescription)
+            image = itemView.findViewById(R.id.image)
+            name = itemView.findViewById(R.id.title)
+            description = itemView.findViewById(R.id.desc)
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        TODO("Not yet implemented")
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PhotoAdapter.ViewHolder {
+        var view = LayoutInflater.from(parent.context).inflate(R.layout.photo_layout, parent, false)
+        return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        TODO("Not yet implemented")
+    override fun onBindViewHolder(holder: PhotoAdapter.ViewHolder, position: Int) {
+        var data = dataList[position]
+        holder.name.text = data.name
+        holder.description.text = data.description
+        holder.image.setImageResource(data.image)
     }
 
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
-    }
+    override fun getItemCount() = dataList.size
 
 
 }
