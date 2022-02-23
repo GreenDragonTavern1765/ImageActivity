@@ -1,6 +1,7 @@
 package edu.temple.imageactivity
 
 import android.content.Context
+import android.text.Layout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -39,6 +40,4 @@ class PhotoAdapter(var context : Context) : RecyclerView.Adapter<PhotoAdapter.Vi
     }
 
     override fun getItemCount() = dataList.size
-
-
 }

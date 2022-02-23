@@ -2,6 +2,7 @@ package edu.temple.imageactivity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -19,7 +20,11 @@ class ImageActivity : AppCompatActivity() {
         recyclerView.layoutManager = GridLayoutManager(applicationContext,4)
         photoAdapter = PhotoAdapter(applicationContext)
         recyclerView.adapter = photoAdapter
+        fillDataList()
+        photoAdapter.setDataList(dataList)
+    }
 
+    fun fillDataList() {
         dataList.add(PhotoObject("Arryn","The Eyrie", R.drawable.arryn))
         dataList.add(PhotoObject("Baratheon","Storm's End", R.drawable.baratheon))
         dataList.add(PhotoObject("Frey","The Twins", R.drawable.frey))
@@ -32,6 +37,10 @@ class ImageActivity : AppCompatActivity() {
         dataList.add(PhotoObject("Tarly","Horn Hill", R.drawable.tarly))
         dataList.add(PhotoObject("Tully","Riverrun", R.drawable.tully))
         dataList.add(PhotoObject("Tyrell","Highgarden", R.drawable.tyrell))
-        photoAdapter.setDataList(dataList)
+
+    }
+
+    fun onListItemClick(position : Int) {
+
     }
 }
